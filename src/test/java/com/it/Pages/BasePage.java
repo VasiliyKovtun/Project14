@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
 
-
     protected static WebDriver driver ;
 
      static {

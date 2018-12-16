@@ -22,7 +22,7 @@ public class LoginPage extends BasePage {
 
 
 
-    public void login(String name, String password){
+    protected void login(String name, String password){
         login.sendKeys(name);
         pass.sendKeys(password);
         submit.click();

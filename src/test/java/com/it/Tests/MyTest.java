@@ -1,19 +1,17 @@
 package com.it.Tests;
 
 import com.it.App;
+import com.it.Users.UserFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MyTest {
-@Test
+public class MyTest extends BaseTest {
+
+        @Test
         public void test(){
-
-
-    App app = new App();
-    app.login.login("vkovt", "tokyo1982");
-    Assert.assertEquals(app.dashBoard.getloginEmail(), "vkovt@i.ua");
-    app.common.stopApp();
+           app.login.loginValidUser();
+            System.out.println(UserFactory.getRandomUser(10));
+            Assert.assertEquals(app.dashBoard.getloginEmail(), validUser.getEmail());
 
     }
 }
-//дз. сделать тест который напишет письмо и отправить (не обязательно)
